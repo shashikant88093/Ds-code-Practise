@@ -1,52 +1,17 @@
-// Input: nums = [2,7,11,15], target = 9
-// Output: [0,1]
-// Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-
-function twoSum(nums, target) {
-    const map = new Map();
-    for (let i = 0; i < nums.length; i++) {
-
-
-        const complement = target - nums[i]
-        console.log(complement, "complement")
-        if (map.has(complement)) {
-            return [map.get(complement), i]
+function twoSum(nums,target){
+    let map = new Map()
+    for(let i=0;i<nums.length;i++){
+        let comp = target - nums[i]
+        console.log(comp,"comp")
+        console.log(map.has(comp),"map.has(comp)")
+        if(map.has(comp)){
+            console.log(map,"inside map")
+            return [map.get(comp),i]
         }
-
-        console.log(complement, "complement@@@@@@@@@@@@@@")
-
-        map.set(nums[i], i)
-        console.log(map, "map")
+        map.set(nums[i],i)
     }
-
-    throw new Error("No two sum solution");
+    console.log(map,"map")
 }
 
-const nums = [2, 7, 11, 15];
-const target = 9;
-const result = twoSum(nums, target);
-console.log(result); // Output: [0, 1]
-
-
-// function twoSum(nums, target) {
-//     const map = new Map();
-
-//     for (let i = 0; i < nums.length; i++) {
-//         const complement = target - nums[i];
-
-//         if (map.has(complement)) {
-//             return [map.get(complement), i];
-//         }
-
-//         map.set(nums[i], i);
-//     }
-
-//     throw new Error("No two sum solution");
-// }
-
-// // Example usage:
-// const nums = [2, 7, 11, 15];
-// const target = 9;
-// const result = twoSum(nums, target);
-// console.log(result); // Output: [0, 1]
+let result = twoSum([2,7,11,15],9)
+console.log(result)
