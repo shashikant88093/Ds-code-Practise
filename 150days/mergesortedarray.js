@@ -48,35 +48,46 @@
 
 
 
-// let num1 = [1, 2, 3, 0, 0, 0];
-// let num2 = [2, 5, 6];
-// let m = 3;
-// let n = 3;
+let num1 = [1, 2, 3, 0, 0, 0];
+let num2 = [2, 5, 6];
+let m = 3;
+let n = 3;
+
+// var merge = function(nums1, m, nums2, n) {
+//     const len = m + n
+//     nums1.splice(len-n)
+//     for (let i = 0; i < n; i++) {
+//       nums1.push(nums2[i])
+//     }
+      
+//     for (let j = 1; j < len; j++) {
+//       if (nums1[j-1] || nums1[j-1] === 0) {
+//         if (nums1[j] < nums1[j-1]) {
+//           let tmp = nums1[j-1]
+//           nums1[j-1] = nums1[j]
+//           nums1[j] = tmp
+//           j = j-2
+//         }
+//       }
+//     }
+//     return nums1
+// };
+
+// merge(num1, m, num2, n);
+// console.log(num1); // Output: [1, 2, 2, 3, 5, 6]
+
+
 
 var merge = function(nums1, m, nums2, n) {
-    let i = m - 1;
-    let j = n - 1;
-    let k = m + n - 1;
+    nums1.splice(m)
+    console.log(num1,"num1")
 
-    // Merge nums2 into nums1 starting from the end
-    while (i >= 0 && j >= 0) {
-        if (nums1[i] > nums2[j]) {
-            nums1[k] = nums1[i];
-            i--;
-        } else {
-            nums1[k] = nums2[j];
-            j--;
-        }
-        k--;
-    }
+       nums2.slice(0, n).forEach(num => nums1.push(num))
+       console.log(nums2,"nums2")
 
-    // If there are remaining elements in nums2, copy them
-    while (j >= 0) {
-        nums1[k] = nums2[j];
-        j--;
-        k--;
-    }
-};
+       nums1.sort((a, b) => a - b);
+       console.log(num1,"num1")
+
+   };
 
 merge(num1, m, num2, n);
-console.log(num1); // Output: [1, 2, 2, 3, 5, 6]
