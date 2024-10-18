@@ -12,7 +12,7 @@ var maxProfit = function(prices) {
             minPrice = price;
         }
         
-        // Calculate the profit if selling at the current price
+        // Calculate the profit if selling at the current price 
         let profit = price - minPrice;
         
         // Update maxProfit if the current profit is greater than the previous maxProfit
