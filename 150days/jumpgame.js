@@ -27,10 +27,11 @@ function canJump(nums) {
             return false;
         }
         farthest = Math.max(farthest, i + nums[i]);
+
     }
     return true;
 }
 
 // Example usage:
-console.log(canJump([2, 3, 1, 1, 4])); // Output: true
+console.log(canJump([2, 3, 1, 0, 4])); // Output: true
 console.log(canJump([3, 2, 1, 0, 4])); // Output: false
