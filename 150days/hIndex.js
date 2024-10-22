@@ -7,7 +7,6 @@
 function calculateHIndex(citations) {
     // Sort citations in descending order
     citations.sort((a, b) => b - a);
-    
     let hIndex = 0;
     for (let i = 0; i < citations.length; i++) {
         // If the current citation count is greater than or equal to the number of papers
