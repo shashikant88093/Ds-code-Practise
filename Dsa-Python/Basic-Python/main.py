@@ -1,46 +1,61 @@
-myvariable = 2
+# myvariable = 2
 
-print(myvariable,type(myvariable))
+# print(myvariable,type(myvariable))
 
-myfloat = 3.6
-print(myfloat,type(myfloat))
+# myfloat = 3.6
+# print(myfloat,type(myfloat))
 
-mycomplex = 3 + 4j
+# mycomplex = 3 + 4j
 
-print(mycomplex,type(mycomplex))
-
-
-# STR single quotes
-
-name = 'John'
-
-print(name,type(name))
-
-namedouble = "John"  # double quotes
-
-print(namedouble,type(namedouble))
-
-nametriple = '''
-Shashikant 
-went 
-for hard work
-'''
-print(nametriple,type(nametriple))
+# print(mycomplex,type(mycomplex))
 
 
+# # STR single quotes
 
-#  list(Array)
+# name = 'John'
 
-name = [1,2,5,"shashikant"]
-print(name,type(name))
+# print(name,type(name))
+
+# namedouble = "John"  # double quotes
+
+# print(namedouble,type(namedouble))
+
+# nametriple = '''
+# Shashikant 
+# went 
+# for hard work
+# '''
+# print(nametriple,type(nametriple))
 
 
-#  input () function
 
-name = input()
+# #  list(Array)
 
-print(name,type(name)) # now name is a string
+# name = [1,2,5,"shashikant"]
+# print(name,type(name))
 
-nametype = int(input())
 
-print(nametype,type(nametype))
+# #  input () function
+
+# name = input()
+
+# print(name,type(name)) # now name is a string
+
+# nametype = int(input())
+
+# print(nametype,type(nametype))
+
+
+
+a = 10
+b = 20
+#  Arithmetic operators
+#  +  -  *  /  %  **  //
+
+print(a%b)
+print(a/b)
+print(a**b)
+print(a+b)
+print(a-b)
+print(a*b)
+print(a//b)
