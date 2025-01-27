@@ -1,32 +1,26 @@
-myList = []
-target = 0
+def binarySearch(arr, target):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
 
-def binarySearch(start,end):
-    global myList
-    global target
+    return -1  # Target not found
 
-    if end-start <= 1:
-        if myList[start] == target:
-            return start
-        
-        if myList[end] == target:
-            return end
-        return -1
-        
-    middle=(start+end)/2
 
-    if myList[middle] > target:
-        return binarySearch(start,middle)
-        
-    return binarySearch(middle,end)
-    
-n = int(input())
+arr = [1, 6, 8, 9, 3, 7, 5, 2]
+arr.sort()  # Sorting the array
+print("Sorted Array:", arr)
 
-target = int(input())
+target = 7
+result = binarySearch(arr, target)
 
-myList = [int(ele) for ele in input().split() ]
-
-index = binarySearch(0,n-1)
-
-print(index)
-
+if result != -1:
+    print(f"Target {target} found at index {result}")
+else:
+    print(f"Target {target} not found.")
