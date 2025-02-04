@@ -14,12 +14,18 @@ for i in range(n):
     minValue =i
     for j in range(i,n):
             # print(j,"j out")
+            print(myList[minValue],"myList[minVal]")
+            print(myList[j],"myList[j]")
             if myList[minValue] > myList[j]:
                 minValue = j
                 # print(j,"j in")
+                print(myList,"in 2nd loop")
     temp = myList[minValue]
+    # print(temp,"temp")
     myList[minValue] = myList[i]
     myList[i] = temp
+    print(myList,"in 1st loop")
+
 
 
 
